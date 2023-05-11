@@ -1,0 +1,177 @@
+/* .image-container img {   //ganz kurze aus video2 selber gemachte sache um etwas style reinzubringen von mir
+  width: 90%;
+  height: 300px;
+  object-fit: cover;
+} */
+
+/* gpt 2 versuch: */
+/* 1 frage:  fügen allen bildern noch css code hinzu , sodass sie in einer bildergalerie angezeigt werden  */
+/* Wrapper für die Bildergalerie */
+/* gallery img wurde angepasst auf diese frage hin:  bitte passe die bildgröße etwas an ich möchte das die bilder kleiner sind nicht größer als 350pc höher oder breite damit sie schön mit einem wrapper gewrappt werden können füg das bitte hinzu  */
+.gallery img {  
+    max-width: 350px;
+    max-height: 350px;
+    object-fit: cover;
+    transition: transform 0.15s ease-in-out;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Hier kannst du die Größe der Bilder anpassen */
+    grid-auto-rows: 200px; /* Hier kannst du die Höhe der Bilder anpassen */
+    grid-gap: 20px; /* Hier kannst du den Abstand zwischen den Bildern anpassen */
+  }
+  
+  /* Stil für die einzelnen Bilder */
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  /* Hover-Effekt */
+  .gallery-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gpt erster versuch, gescheitert, ließ sich nichtmehr fixen. */
+
+
+/* version 5 er kriegt den wrapper einfach nicht richtig hin... meine frage: hier am wrapper liegt das problem 33%für 3 spalten, 25% für 4 spalten, kann sich das nicht automatisch anpassen? */
+/* Stil für den Wrapper */
+/* .gallery-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  } */
+    
+  /* Stil für die Bildergalerie- änderungen bei frage 6:nun werden die bilder nur in einer reihe angezeigt, bei der bildschirmgröße von mir müssten es aber 3-4 bilder sein */
+  /* weiterhin nur eine bildreihe, das kriegt er nicht hin, neustart. */
+  /* .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+  } */
+  
+  /* Stil für die einzelnen Bilder */
+  /* .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.15s ease-in-out;
+  } */
+  
+  /* Hover-Effekt */
+  /* .gallery img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  } */
+  
+
+
+
+/* frage 3: die bilder sind standartmäßig untereinander in der mitte, können sie nebeneinander sein und dann gewrappt werden wenn das fenster zu schmal wird? bitte geb mir den code dafür */
+/* .gallery-wrapper {
+    display: inline-block;
+    width: auto; 
+    padding: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-wrapper {
+      width: 50%; 
+    }
+  } */
+
+
+
+
+
+/* frage 2. versuch:  kanst du einen wrapper hinzufügen sodass die bilder erst nebeneinander angezeigt werden? und noch etwas padding bitte */
+
+/* gpt 2 versuch: Stil für den Wrapper */
+/* gallery-wrapper musste ausgeblendet werden für version 3 den neuen wrapper */
+/* .gallery-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  } */
+  
+  /* Stil für die Bildergalerie */
+  /* frage 4 : der code wurde mit dieser frage geupdatet:   so sieht mein code nun aus, kannst du es so einstellen das die bilder sich über die ganze seite verteilen bevor sie wrappen (css code eingefügt)  */
+  /* Stil für die Bildergalerie */
+  /* .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: calc(200px * 0.75);
+    grid-gap: 20px;
+  } */
+  
+  
+  /* Stil für die einzelnen Bilder */
+  /* .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.15s ease-in-out;
+  } */
+  
+  /* Hover-Effekt */
+  /* .gallery img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  } */
+  
+
+
+/* nach style bei gpt gefragt:  style mir meine bildergalerie so wie es üblich ist als css code  */
+
+/* gpt 1. versuch: Stil für die Bildergalerie */
+/* .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+  }
+  
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+ 
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+   */
